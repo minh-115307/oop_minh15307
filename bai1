@@ -1,0 +1,68 @@
+#include<iostream>
+using namespace std;
+class Vehicle{
+	private:
+		int maxe;
+		string loaixe;
+		int giovao;
+		int thoigiando;
+		double phidoxe;
+		bool dangchiemcho;
+		public:
+			Vehicle();
+			Vehicle(int ma,const string&loai,int gio,int thoiluong);
+			int laymaxe() const{return maxe;}
+			string layloaixe() const{return loaixe;}
+			int layGiovao() const{return giovao;}
+			double layphidoxe() const{return phidoxe;}
+			bool laydangchiemcho() const{return dangchiemcho;}
+			void ganmaxe(int ma){this.maxe=ma;}
+			void ganloaixe(const string&loai){
+				this->loaixe=loai;
+			}
+			void gangiovao(int gio){
+				this->giovao = gio;
+			}
+			void ganthoiluongdo(int thoiluong){
+				this->thoigiando = thoiluong;
+			}
+			void ganphidoxe(double phi){
+				this->phidoxe=phi;
+			}
+			void gandangchiemcho(bool trangthai){
+				this->dangchiemcho = trangthai;
+			}
+			static string
+			chuanhoaloaixe(const string&loai){
+				string t =loaixe;
+				tranform(t.begin(),t.end(),t.begin(),::tolower);
+				if(t == "car") loai = "car";
+				else if(t == "motorcycle") loai = "motorcycle";
+				else if(t == "bicycle") loai = "bicycle";
+			}
+			static bool laloaixehople(const string&loai){
+				if(loai == "car"||loai == "motorcycle"||loai == "bicycle") return 1;
+				else return 0;
+			}
+			void tinhphidoxe(const string&loai,int giovao,int thoiluong){
+				double phicb = 0.0;
+				if(loai == "car"){
+					phicb = 6.0;
+				}	else if(loai == "motorcycle"){
+					phicb = 4.0;
+				} else if(loai == "bicycle"){
+					phicb = 2.0;
+				}
+				double tongphi = 0.0;
+				for(int i = 0;i < thoiluong;i++){
+					int tl = (giovao + i) % 24;
+					double tp = phicb;
+					if(i < 2){
+						bool giocaodiem = tl <=6 && tl >
+					}
+				}
+			}
+			void hienthi() const;
+			
+		
+};
